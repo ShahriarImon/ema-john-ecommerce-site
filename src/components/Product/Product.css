@@ -1,0 +1,38 @@
+.product{
+    display: flex;
+}
+
+.product-img{
+    min-width: 20%;
+    padding-right: 2%;
+
+}
+.product-img img{
+    width: 100%;
+  
+}
+.product-details{
+    margin-right: 1%;
+}
+.product-name{
+    color: rgb(48, 81, 225);
+}
+.addCartBtn{
+background-color: rgb(223, 192, 16);
+border: none;
+padding: 3% 20%;
+border-radius: 4px;
+}
+.addCartBtn:hover{
+    cursor: pointer;
+    background-color: rgb(236, 134, 97);
+}
+.product-desc{
+    display: flex;
+}
+.product-desc-left{
+    margin-right: 8%;
+}
+.features-list{
+    color: gray;
+}

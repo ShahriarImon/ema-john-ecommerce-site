@@ -1,0 +1,23 @@
+.cartAddedImg {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+figure {
+  width: 30%;
+  padding-right: 1%;
+}
+.cartAddedImg img {
+  width: 100%;
+  margin: 1px 4px;
+  border: 2px solid red;
+}
+
+.cartAddedImg img:hover {
+  cursor: pointer;
+}
+.cartCountBtn {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
