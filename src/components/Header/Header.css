@@ -14,15 +14,14 @@
   /* font-size: 20px; */
 }
 .header nav p {
-  padding: 3%;
 }
-nav a {
-  text-decoration: none;
+
+nav p {
   color: white;
   margin: 0 30px;
-  padding: 0 5px;
+  padding: 1% 5px;
 }
-nav a:hover {
+nav p:hover {
   background-color: grey;
   cursor: pointer;
 }

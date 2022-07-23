@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import Product from "../Product/Product";
-import "./Cart.css";
+import "./ReviewCart.css";
 import { Link } from "react-router-dom";
 import ReviewOrder from "../ReviewOrder/ReviewOrder";
 import { CartContext } from "../../App";
 
-const Cart = (props) => {
+const ReviewCart = (props) => {
   let [cart, setCart] = useContext(CartContext);
   const subTotal = cart.reduce(
     (total, product) => total + product.count * product.price,
@@ -72,7 +72,7 @@ const Cart = (props) => {
       </p>
       <br />
       <div className="center">
-        <Link to="/shop/reviewOrder">
+        <Link to="/shop/shipment">
           <button className="Btn">{props.cartBtn}</button>
         </Link>
       </div>
@@ -80,4 +80,4 @@ const Cart = (props) => {
   );
 };
 
-export default Cart;
+export default ReviewCart;

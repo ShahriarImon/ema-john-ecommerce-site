@@ -25,9 +25,7 @@ const Product = (props) => {
 
       <div className="product-details">
         <div className="product-name">
-          <Link to="/shop/haha">
-            <p>{name}</p>
-          </Link>
+          <p>{name}</p>
         </div>
         <div>
           <small>by: {seller}</small>
@@ -38,10 +36,10 @@ const Product = (props) => {
             <p>${price}</p>
             <p>only {stock} left in stock - order soon</p>
             <button
-              className="addCartBtn"
+              className="Btn"
               onClick={() => props.handleAddCartBtn(props.product)}
             >
-              <FontAwesomeIcon icon={faShoppingCart} /> Add to cart
+              <FontAwesomeIcon icon={faShoppingCart} /> {props.btnName}
             </button>
           </div>
           <div className="product-desc-right">

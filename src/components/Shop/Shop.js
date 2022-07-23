@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { CartContext, ProductsContext } from "../../App";
 import Cart from "../Cart/Cart";
+import Header from "../Header/Header";
 import Product from "../Product/Product";
 
 import "./Shop.css";
@@ -14,7 +15,7 @@ const Shop = () => {
   console.log(cart, setCart);
 
   // const orderTaken = (product) => {
-  //   // localStorage.setItem("key", JSON.stringify(product));
+  //    localStorage.setItem("key", JSON.stringify(product));
   // };
   const handleAddCartBtn = (product) => {
     let newcart = [];
@@ -43,21 +44,29 @@ const Shop = () => {
   // const goReview = (order)=>{
   // }
   return (
-    <div className="shop-container">
-      <div className="product-container">
-        {products.map((element) => (
-          <Product
-            product={element}
-            handleAddCartBtn={handleAddCartBtn}
-            key={element.key}
-          ></Product>
-        ))}
-      </div>
-      <div className="cart-container">
-        <Cart
-          handleRemoveFromCartBtn={handleRemoveFromCartBtn}
-          // orderTaken={orderTaken}
-        ></Cart>
+    <div>
+      <Header></Header>
+      <br />
+      <br />
+      <div className="shop-container">
+        <div className="product-container">
+          {products.map((element) => (
+            <Product
+              product={element}
+              handleAddCartBtn={handleAddCartBtn}
+              key={element.key}
+              btnName="Add to cart"
+            ></Product>
+          ))}
+        </div>
+        <div className="cart-container">
+          <Cart
+            // TODO:cartBtn is used to dynamic the button name
+            cartBtn="Review Order"
+            handleRemoveFromCartBtn={handleRemoveFromCartBtn}
+            isCartImg={true}
+          ></Cart>
+        </div>
       </div>
     </div>
   );
